@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
  pdfFormGroup!: FormGroup;
  isSubmitted: boolean = false;
  //pdfSrc = "https://vadimdez.github.io/ng2-pdf-viewer/assets/pdf-test.pdf";
- pdfSrc = "../assets/PdfFile/marksheets_transfercertificates.pdf";
+ pdfSrc = "assets/PdfFile/marksheets_transfercertificates.pdf";
  @ViewChild('pdfFormModalOpen') pdfFormModalOpen!: ElementRef;
  pageVariable: number = 1;
 

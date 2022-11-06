@@ -93,20 +93,19 @@
       </div>
       <div class="modal-body h-100" (scroll)="scroll()">
         <div class="p-3 pdf-modal-body h-100" id="pdf-modal-body">
-          <pdf-viewer [src]="pdfSrc" [(page)]="pageVariable" [show-all]="true" [render-text]="true" [zoom]="0"
+          <!-- <pdf-viewer [src]="pdfSrc" [(page)]="pageVariable" [show-all]="true" [render-text]="true" [zoom]="0"
             (after-load-complete)="loadCompletePdf($event)" [show-borders]="false" [autoresize]="true"
             [original-size]="false" [show-all]="true" style="display: block;height:100vh;width:100%">
-          </pdf-viewer>
-          
+          </pdf-viewer> -->
           <!-- <iframe src="https://vadimdez.github.io/ng2-pdf-viewer/assets/pdf-test.pdf#toolbar=0&navpanes=0&scrollbar=0"
             frameBorder="0" scrolling="no" height="100%" width="100%"
             style="overflow:hidden;width: 100%; height: 100vh; "></iframe> -->
 
-          <!-- <pdf-viewer [src]="pdfSrc" [show-all]="true" [render-text]="true" [zoom]="1" [rotation]="0"
-            [show-borders]="true" [original-size]="false" [page]="10" (after-load-complete)="loadPdfDocument($event)"
+          <pdf-viewer [src]="pdfSrc" [show-all]="true" [render-text]="true" [zoom]="1" [rotation]="0"
+            [show-borders]="true" [autoresize]="true" [original-size]="false" [page]="10" (after-load-complete)="loadPdfDocument($event)"
             (page-rendered)="loadCompletePdf($event)" (text-layer-rendered)="loadCompletePdf($event)"
             style="display: block;height:100vh;width:100%">
-          </pdf-viewer> -->
+          </pdf-viewer>
         </div>
         <!-- <pdf-viewer [src]="pdfSrc" [rotation]="0" [original-size]="false" [show-all]="true" [fit-to-page]="false"
           [zoom]=".5" [zoom-scale]="'page-width'" [page]="'page'" [stick-to-page]="true" [render-text]="true"
