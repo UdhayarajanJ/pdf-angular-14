@@ -1,0 +1,37 @@
+@import "../scss/app";
+
+.header {
+    background-color: $primary-dark-color;
+    color: $primary-font-color;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: .3rem;
+
+
+    h4 {
+        font-size: 1.3rem;
+        padding: .3rem 0;
+        font-weight: bold;
+    }
+}
+
+label {
+    font-weight: bold;
+    font-size: .9rem;
+}
+
+.custom-btn-primary {
+    @include button-app($primary-shadow-color, $primary-font-color, .9rem, bold);
+}
+
+.custom-btn-secondary {
+    @include button-app(#000, $primary-font-color, .9rem, bold);
+    margin: 0 .4rem;
+}
+
+.modal-header {
+    background-color: $primary-shadow-color;
+    color: $primary-font-color;
+    font-weight: bold;
+    text-align: center;
+}

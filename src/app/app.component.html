@@ -1,0 +1,99 @@
+<div class="container">
+  <div class="row header">
+    <h4>To Learn Angular13 PDF</h4>
+  </div>
+  <form class="row mt-3" [formGroup]="pdfFormGroup" (ngSubmit)="onSubmit()">
+    <div class="col-12">
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-4">
+          <div class="py-1">
+            <label class="form-label">Student Name.</label>
+            <input type="text" formControlName="studentName" appAllowOnlyCharacter class="form-control"
+              [ngClass]="f['studentName'].errors && isSubmitted?'error-indication':''">
+          </div>
+          <div *ngIf="f['studentName'].errors && isSubmitted">
+            <label *ngIf="f['studentName'].errors['required']" class="error-message">Student Name Is Required.</label>
+          </div>
+        </div>
+      </div>
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-4">
+          <div class="py-1">
+            <label for="exampleFormControlInput1" class="form-label">Roll No.</label>
+            <input type="text" formControlName="rollNumber" appAllowOnlyCharacterAndNumber class="form-control"
+              [ngClass]="f['rollNumber'].errors && isSubmitted?'error-indication':''">
+          </div>
+          <div *ngIf="f['rollNumber'].errors && isSubmitted">
+            <label *ngIf="f['rollNumber'].errors['required']" class="error-message">Roll Number Is Required.</label>
+          </div>
+        </div>
+      </div>
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-4">
+          <div class="py-1">
+            <label for="exampleFormControlInput1" class="form-label">Department Name</label>
+            <input type="text" formControlName="departmentName" appAllowOnlyCharacter class="form-control"
+              [ngClass]="f['departmentName'].errors && isSubmitted?'error-indication':''">
+          </div>
+          <div *ngIf="f['departmentName'].errors && isSubmitted">
+            <label *ngIf="f['departmentName'].errors['required']" class="error-message">Department Name Is
+              Required.</label>
+          </div>
+        </div>
+      </div>
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-4">
+          <div class="py-1">
+            <label for="exampleFormControlInput1" class="form-label">College Name</label>
+            <input type="text" formControlName="collageName" appAllowOnlyCharacter class="form-control"
+              [ngClass]="f['collageName'].errors && isSubmitted?'error-indication':''">
+          </div>
+          <div *ngIf="f['collageName'].errors && isSubmitted">
+            <label *ngIf="f['collageName'].errors['required']" class="error-message">Collage Name Is
+              Required.</label>
+          </div>
+        </div>
+      </div>
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-4">
+          <div class="py-1">
+            <label for="exampleFormControlInput1" class="form-label">College City</label>
+            <input type="text" formControlName="collageCity" appAllowOnlyCharacterAndNumber class="form-control"
+              [ngClass]="f['collageName'].errors && isSubmitted?'error-indication':''">
+          </div>
+          <div *ngIf="f['collageCity'].errors && isSubmitted">
+            <label *ngIf="f['collageCity'].errors['required']" class="error-message">College City Is
+              Required.</label>
+          </div>
+        </div>
+      </div>
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-4">
+          <div class="py-3 text-end">
+            <button type="button" (click)="clearForm()" class="btn custom-btn-secondary">Cancel</button>
+            <button type="submit" class="btn custom-btn-primary">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+<button type="button" data-bs-toggle="modal" data-bs-target="#pdfModal" #pdfFormModalOpen [hidden]="true"></button>
+<div class="modal fade" id="pdfModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Preview The Letter</h1>
+      </div>
+      <div class="modal-body">
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" (click)="clearForm()" data-bs-dismiss="modal"
+          class="btn custom-btn-secondary">Cancel</button>
+        <button type="button" class="btn custom-btn-primary">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
