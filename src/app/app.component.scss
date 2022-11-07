@@ -35,3 +35,20 @@ label {
     font-weight: bold;
     text-align: center;
 }
+
+
+
+
+
+.modal-dialog-scrollable {
+    .modal-body {
+        padding: unset !important;
+        overflow: hidden !important;
+
+        pdf-viewer {
+            height: 400px;
+            width: 100%;
+            display: block;
+        }
+    }
+}
