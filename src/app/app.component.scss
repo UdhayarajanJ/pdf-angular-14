@@ -36,6 +36,19 @@ label {
     text-align: center;
 }
 
-.modal-body {
-    padding: unset !important;
+
+
+
+
+.modal-dialog-scrollable {
+    .modal-body {
+        padding: unset !important;
+        overflow: hidden !important;
+
+        pdf-viewer {
+            height: 400px;
+            width: 100%;
+            display: block;
+        }
+    }
 }

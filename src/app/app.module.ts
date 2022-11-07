@@ -6,8 +6,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { LoggerService } from './core/logger.service';
 import { SharedModule } from './shared/shared.module';
-import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { CommonModule } from '@angular/common';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,7 @@ import { CommonModule } from '@angular/common';
     SharedModule,
     NgxSpinnerModule,
     FormsModule,
-    PdfViewerModule 
+    PdfViewerModule
   ],
   providers: [LoggerService],
   bootstrap: [AppComponent]
